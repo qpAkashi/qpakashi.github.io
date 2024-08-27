@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .slide-in-blurred-right {
+        -webkit-animation: slide-in-blurred-right 0.6s
+          cubic-bezier(0.23, 1, 0.32, 1) both;
+        animation: slide-in-blurred-right 0.6s cubic-bezier(0.23, 1, 0.32, 1)
+          both;
+      }
+
+      @-webkit-keyframes slide-in-blurred-right {
+        0% {
+          -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+          transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+          -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+          -webkit-filter: blur(40px);
+          filter: blur(40px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+          transform: translateX(0) scaleY(1) scaleX(1);
+          -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+          -webkit-filter: blur(0);
+          filter: blur(0);
+          opacity: 1;
+        }
+      }
+      @keyframes slide-in-blurred-right {
+        0% {
+          -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+          transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+          -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+          -webkit-filter: blur(40px);
+          filter: blur(40px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+          transform: translateX(0) scaleY(1) scaleX(1);
+          -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+          -webkit-filter: blur(0);
+          filter: blur(0);
+          opacity: 1;
+        }
+      }
+
+      .slide-in-blurred-left {
+        -webkit-animation: slide-in-blurred-left 0.6s
+          cubic-bezier(0.23, 1, 0.32, 1) both;
+        animation: slide-in-blurred-left 0.6s cubic-bezier(0.23, 1, 0.32, 1)
+          both;
+      }
+
+      @-webkit-keyframes slide-in-blurred-left {
+        0% {
+          -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+          transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+          -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+          -webkit-filter: blur(40px);
+          filter: blur(40px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+          transform: translateX(0) scaleY(1) scaleX(1);
+          -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+          -webkit-filter: blur(0);
+          filter: blur(0);
+          opacity: 1;
+        }
+      }
+      @keyframes slide-in-blurred-left {
+        0% {
+          -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+          transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+          -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+          -webkit-filter: blur(40px);
+          filter: blur(40px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+          transform: translateX(0) scaleY(1) scaleX(1);
+          -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+          -webkit-filter: blur(0);
+          filter: blur(0);
+          opacity: 1;
+        }
+      }
+
+      .slide-in-blurred-top {
+        -webkit-animation: slide-in-blurred-top 0.6s
+          cubic-bezier(0.23, 1, 0.32, 1) both;
+        animation: slide-in-blurred-top 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
+      }
+
+      @-webkit-keyframes slide-in-blurred-top {
+        0% {
+          -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+          transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+          -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+          -webkit-filter: blur(40px);
+          filter: blur(40px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+          transform: translateY(0) scaleY(1) scaleX(1);
+          -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+          -webkit-filter: blur(0);
+          filter: blur(0);
+          opacity: 1;
+        }
+      }
+      @keyframes slide-in-blurred-top {
+        0% {
+          -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+          transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+          -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+          -webkit-filter: blur(40px);
+          filter: blur(40px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+          transform: translateY(0) scaleY(1) scaleX(1);
+          -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+          -webkit-filter: blur(0);
+          filter: blur(0);
+          opacity: 1;
+        }
+      }
+
+      body {
+        font-family: "Lora", serif;
+        background-image: url("backroundcontact.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      main {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      class="flex items-center justify-between px-5 py-3 bg-[#811c1c] text-white animate-fadeInDown"
+    >
+      <a
+        href="acasa.html"
+        class="text-white font-bold text-2xl no-underline px-5 py-2 border border-white rounded transition duration-300 ease-in-out hover:bg-blue-500 hover:scale-110"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+          />
+        </svg>
+      </a>
+      <nav class="flex gap-2.5">
+        <a
+          href="informatii.html"
+          class="flex items-center px-5 py-2 bg-[#811c1c] text-white border border-white rounded no-underline text-lg transition duration-300 ease-in-out hover:bg-blue-500 hover:scale-110 gap-2"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"
+            />
+          </svg>
+          Informatii
+        </a>
+        <a
+          href="contact.html"
+          class="flex items-center px-5 py-2 bg-[#811c1c] text-white border border-white rounded no-underline text-lg transition duration-300 ease-in-out hover:bg-blue-500 hover:scale-110 gap-2"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+            />
+          </svg>
+          Contact
+        </a>
+      </nav>
+    </header>
+
+    <main class="p-4">
+      <div
+        class="flex flex-col md:flex-row items-center justify-between gap-4 slide-in-fwd-center"
+      >
+        <div
+          class="flex-1 bg-[#811c1c] text-white p-4 rounded-md slide-in-blurred-left"
+        >
+          <h2 class="mb-2 text-lg font-bold">
+            Locatia noastra o puteti gasi aici!
+          </h2>
+          <div class="w-full h-64 md:h-96 rounded-md overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2860.5919327907327!2d27.331784876577014!3d44.194873717228496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b0229ef1ffaf1f%3A0xdf0e80d997b6c29c!2zU3RyYWRhIFNsb2JvemllaSAyNSwgQ8SDbMSDcmHImWkgOTEwMDAx!5e0!3m2!1sro!2sro!4v1723743083128!5m2!1sro!2sro"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+
+        <div
+          class="flex-1 bg-[#811c1c] text-white p-4 rounded-md slide-in-blurred-top"
+        >
+          <h1 class="text-lg font-bold mb-2">Date de contact:</h1>
+          <p><strong>Telefon:</strong> +40 123 456 789</p>
+          <p><strong>Adresa:</strong> Strada Sloboziei 25, Călărași, Romania</p>
+          <p><strong>Email:</strong> contact@example.com</p>
+        </div>
+
+        <div
+          class="flex-1 bg-[#811c1c] text-white p-4 rounded-md slide-in-blurred-right"
+        >
+          <h1 class="text-lg font-bold mb-2">Orar de lucru:</h1>
+          <table class="w-full text-left border-separate border-spacing-2">
+            <thead>
+              <tr>
+                <th class="p-2">Ziua</th>
+                <th class="p-2">Ore de lucru</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-2">Luni</td>
+                <td class="p-2">08:00 - 18:00</td>
+              </tr>
+              <tr>
+                <td class="p-2">Marți</td>
+                <td class="p-2">08:00 - 18:00</td>
+              </tr>
+              <tr>
+                <td class="p-2">Miercuri</td>
+                <td class="p-2">08:00 - 18:00</td>
+              </tr>
+              <tr>
+                <td class="p-2">Joi</td>
+                <td class="p-2">08:00 - 18:00</td>
+              </tr>
+              <tr>
+                <td class="p-2">Vineri</td>
+                <td class="p-2">08:00 - 18:00</td>
+              </tr>
+              <tr>
+                <td class="p-2">Sâmbătă</td>
+                <td class="p-2">09:00 - 14:00</td>
+              </tr>
+              <tr>
+                <td class="p-2">Duminică</td>
+                <td class="p-2">Închis</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-[#811c1c] text-white py-4 text-center mt-10">
+      <p>&copy; 2024 Cupidon Basfalion SRL - Toate drepturile rezervate.</p>
+    </footer>
+  </body>
+</html>
