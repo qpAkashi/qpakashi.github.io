@@ -12,6 +12,114 @@
     />
     <style>
 
+      @media (max-width: 640px) {
+        /* Mobile: Single column layout */
+        section {
+          grid-template-columns: 1fr;
+        }
+    
+        section img {
+          height: auto; /* Ensure images resize correctly */
+        }
+      }
+    
+      @media (min-width: 641px) and (max-width: 1024px) {
+        /* Tablet: Two-column layout */
+        section {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    
+      @media (min-width: 1025px) {
+        /* Desktop: Three-column layout */
+        section {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        header a {
+          margin: 10px 0;
+        }
+
+        main section {
+          padding: 4px;
+          margin: 10px 0;
+        }
+
+        section img {
+          height: 200px;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        .text-lg {
+          font-size: 1rem;
+        }
+
+        .px-8 {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        .py-2 {
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+
+        footer {
+          font-size: 0.875rem;
+          padding: 10px;
+        }
+      }
+
+      /* Smaller devices */
+      @media (max-width: 480px) {
+        header {
+          padding: 10px 0;
+        }
+
+        header nav {
+          flex-direction: column;
+        }
+
+        .text-4xl {
+          font-size: 1.5rem;
+        }
+
+        .text-lg {
+          font-size: 0.875rem;
+        }
+
+        section img {
+          height: 150px;
+        }
+
+        .px-8 {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
+        .grid-cols-1 {
+          grid-template-columns: 1fr;
+        }
+
+        .grid-cols-3 {
+          grid-template-columns: 1fr;
+        }
+
+        .py-4 {
+          padding: 15px;
+        }
+      }
+
       .slide-in-blurred-bottom {
         -webkit-animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
                 animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
@@ -34,7 +142,7 @@
 
       body {
         font-family: "Lora", serif;
-        background-image: url("pozamagazin.jfif");
+        background-color: antiquewhite;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -284,11 +392,11 @@
 
     <main>
       <section
-        class="flex flex-col md:flex-row items-center p-6 md:p-8 bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 rounded-lg shadow-2xl m-5 scale-in-ver-top slide-in-blurred-top"
+        class="flex flex-col md:flex-row items-center p-6 md:p-8 rounded-lg shadow-2xl m-5 scale-in-ver-top slide-in-blurred-top"
       >
         <div class="flex-shrink-0 mb-5 md:mb-0">
           <img
-            src="motor1.png"
+            src="poza1.jfif"
             alt="Logo Simplu"
             class="w-full h-48 md:h-60 object-cover rounded-lg shadow-lg"
           />
@@ -310,38 +418,40 @@
             <button
               class="relative px-8 py-2 rounded-md bg-white isolation-auto z-10 border-2 border-[#811c1c] before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-right-full before:hover:right-0 before:rounded-full before:bg-[#811c1c] before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700"
             >
-              Descoperă acum
+              <span class="relative text-[#811c1c] z-10 transition duration-700 hover:text-white">Explorează mai mult</span>
             </button>
           </a>
         </div>
       </section>
-      <section class="grid grid-cols-1 md:grid-cols-3 gap-6 m-5 scale-in-ver-top">
-        <div class=" bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 rounded-lg shadow-lg overflow-hidden slide-in-blurred-left">
-          <img
-            src="placeholder1.png"
-            alt="Card Image 1"
-            class="w-full h-32 sm:h-48 object-cover"
-          />
-        </div>
-        <div class=" bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 rounded-lg shadow-lg overflow-hidden slide-in-blurred-bottom">
-          <img
-            src="placeholder2.png"
-            alt="Card Image 2"
-            class="w-full h-32 sm:h-48 object-cover"
-          />
-        </div>
-        <div class=" bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 rounded-lg shadow-lg overflow-hidden slide-in-blurred-right">
-          <img
-            src="placeholder3.png"
-            alt="Card Image 3"
-            class="w-full h-32 sm:h-48 object-cover"
-          />
-        </div>
-      </section>
     </main>
-
-    <footer class="bg-[#811c1c] text-white py-4 text-center mt-10">
-      <p>&copy; 2024 Cupidon Basfalion SRL - Toate drepturile rezervate.</p>
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6 m-5 scale-in-ver-top">
+      <div class="bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 rounded-lg shadow-lg overflow-hidden slide-in-blurred-left">
+        <img
+          src="poza2.jfif"
+          alt="Card Image 1"
+          class="w-full h-32 sm:h-48 md:h-60 object-cover"
+        />
+      </div>
+      <div class="bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 rounded-lg shadow-lg overflow-hidden slide-in-blurred-bottom">
+        <img
+          src="poza3.jfif"
+          alt="Card Image 2"
+          class="w-full h-32 sm:h-48 md:h-60 object-cover"
+        />
+      </div>
+      <div class="bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 rounded-lg shadow-lg overflow-hidden slide-in-blurred-right">
+        <img
+          src="poza4.jfif"
+          alt="Card Image 3"
+          class="w-full h-32 sm:h-48 md:h-60 object-cover"
+        />
+      </div>
+    </section>
+    
+    <footer
+      class="text-center text-white p-5 mt-auto bg-[#811c1c] slide-in-blurred-top"
+    >
+      &copy; 2024 Cupudion Basfalion SRL - Toate drepturile rezervate
     </footer>
   </body>
 </html>
