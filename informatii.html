@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Informatii</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,11 +24,19 @@
               animation: slide-in-blurred-left 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
     }
 
-    html, body {
-      height: 100%;
+    .slide-in-blurred-top {
+      -webkit-animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+              animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
     }
 
     body {
+      font-family: "Lora", serif;
+      background-color: antiquewhite;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      overflow-x: hidden;
       display: flex;
       flex-direction: column;
     }
@@ -38,196 +45,287 @@
       flex: 1;
     }
 
-    footer {
-      background-color: #811c1c;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-  
-@-webkit-keyframes slide-in-blurred-left {
-  0% {
-    -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
-            transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-    -webkit-filter: blur(40px);
-            filter: blur(40px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
-            transform: translateX(0) scaleY(1) scaleX(1);
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-filter: blur(0);
-            filter: blur(0);
-    opacity: 1;
-  }
+@-webkit-keyframes slide-in-blurred-top {
+0% {
+  -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+          transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+  -webkit-transform-origin: 50% 0%;
+          transform-origin: 50% 0%;
+  -webkit-filter: blur(40px);
+          filter: blur(40px);
+  opacity: 0;
+}
+100% {
+  -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+          transform: translateY(0) scaleY(1) scaleX(1);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-filter: blur(0);
+          filter: blur(0);
+  opacity: 1;
+}
+}
+@keyframes slide-in-blurred-top {
+0% {
+  -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+          transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+  -webkit-transform-origin: 50% 0%;
+          transform-origin: 50% 0%;
+  -webkit-filter: blur(40px);
+          filter: blur(40px);
+  opacity: 0;
+}
+100% {
+  -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+          transform: translateY(0) scaleY(1) scaleX(1);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-filter: blur(0);
+          filter: blur(0);
+  opacity: 1;
+}
+}
 
+@-webkit-keyframes slide-in-blurred-left {
+0% {
+  -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+          transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+  -webkit-filter: blur(40px);
+          filter: blur(40px);
+  opacity: 0;
+}
+100% {
+  -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+          transform: translateX(0) scaleY(1) scaleX(1);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-filter: blur(0);
+          filter: blur(0);
+  opacity: 1;
+}
 }
 @keyframes slide-in-blurred-left {
-  0% {
-    -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
-            transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-    -webkit-filter: blur(40px);
-            filter: blur(40px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
-            transform: translateX(0) scaleY(1) scaleX(1);
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-filter: blur(0);
-            filter: blur(0);
-    opacity: 1;
-  }
+0% {
+  -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+          transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+  -webkit-filter: blur(40px);
+          filter: blur(40px);
+  opacity: 0;
+}
+100% {
+  -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+          transform: translateX(0) scaleY(1) scaleX(1);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-filter: blur(0);
+          filter: blur(0);
+  opacity: 1;
+}
 }
 
- @-webkit-keyframes slide-in-blurred-right {
-  0% {
-    -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
-            transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
-    -webkit-transform-origin: 0% 50%;
-            transform-origin: 0% 50%;
-    -webkit-filter: blur(40px);
-            filter: blur(40px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
-            transform: translateX(0) scaleY(1) scaleX(1);
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-filter: blur(0);
-            filter: blur(0);
-    opacity: 1;
-  }
+@-webkit-keyframes slide-in-blurred-right {
+0% {
+  -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+          transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+  -webkit-filter: blur(40px);
+          filter: blur(40px);
+  opacity: 0;
+}
+100% {
+  -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+          transform: translateX(0) scaleY(1) scaleX(1);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-filter: blur(0);
+          filter: blur(0);
+  opacity: 1;
+}
 }
 @keyframes slide-in-blurred-right {
-  0% {
-    -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
-            transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
-    -webkit-transform-origin: 0% 50%;
-            transform-origin: 0% 50%;
-    -webkit-filter: blur(40px);
-            filter: blur(40px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
-            transform: translateX(0) scaleY(1) scaleX(1);
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-filter: blur(0);
-            filter: blur(0);
-    opacity: 1;
-  }
+0% {
+  -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+          transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+  -webkit-filter: blur(40px);
+          filter: blur(40px);
+  opacity: 0;
+}
+100% {
+  -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+          transform: translateX(0) scaleY(1) scaleX(1);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-filter: blur(0);
+          filter: blur(0);
+  opacity: 1;
+}
 }
 
- @-webkit-keyframes slide-in-blurred-bottom {
-  0% {
-    -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
-            transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
-    -webkit-transform-origin: 50% 100%;
-            transform-origin: 50% 100%;
-    -webkit-filter: blur(40px);
-            filter: blur(40px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
-            transform: translateY(0) scaleY(1) scaleX(1);
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-filter: blur(0);
-            filter: blur(0);
-    opacity: 1;
-  }
+@-webkit-keyframes slide-in-blurred-bottom {
+0% {
+  -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+          transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  -webkit-filter: blur(40px);
+          filter: blur(40px);
+  opacity: 0;
+}
+100% {
+  -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+          transform: translateY(0) scaleY(1) scaleX(1);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-filter: blur(0);
+          filter: blur(0);
+  opacity: 1;
+}
 }
 @keyframes slide-in-blurred-bottom {
-  0% {
-    -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
-            transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
-    -webkit-transform-origin: 50% 100%;
-            transform-origin: 50% 100%;
-    -webkit-filter: blur(40px);
-            filter: blur(40px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
-            transform: translateY(0) scaleY(1) scaleX(1);
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-filter: blur(0);
-            filter: blur(0);
-    opacity: 1;
-  }
+0% {
+  -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+          transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  -webkit-filter: blur(40px);
+          filter: blur(40px);
+  opacity: 0;
 }
-
-
+100% {
+  -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+          transform: translateY(0) scaleY(1) scaleX(1);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-filter: blur(0);
+          filter: blur(0);
+  opacity: 1;
+}
+}
   </style>
 </head>
-<body class="bg-cover bg-center bg-no-repeat bg-fixed font-lora" style="background-image: url('backroundcontact.jpg');">
-  <header class="flex items-center justify-between px-5 py-3 bg-[#811c1c] text-white animate-fadeInDown">
-    <a href="index.html" class="text-white font-bold text-2xl no-underline px-5 py-2 border border-white rounded transition-transform duration-300 ease-in-out hover:bg-blue-500 hover:scale-110">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/>
+<body>
+  <header
+  class="flex items-center justify-between lg:px-5 lg:py-3 bg-[#811c1c] text-white py-10"
+>
+  <a
+    href="index.html"
+    class="flex items-center lg:px-5 lg:py-2 lg:rounded bg-[#811c1c] text-white lg:border border-white rounded-full no-underline transition lg:text-lg duration-300 ease-in-out hover:bg-[#967969] hover:scale-110 gap-2 px-14 py-6 text-4xl border-2 ml-4"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-12 h-12 lg:w-6 lg:h-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+      />
+    </svg>
+  </a>
+  <nav class="flex gap-2.5">
+    <a
+      href="informatii.html"
+      class="flex items-center lg:px-5 lg:py-2 lg:rounded bg-[#811c1c] text-white lg:border border-white rounded-full no-underline transition lg:text-lg duration-300 ease-in-out hover:bg-[#967969] hover:scale-110 gap-2 px-6 py-6 text-4xl border-2 lg:font-light font-bold lg:hover:underline"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-12 h-12 lg:w-6 lg:h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"
+        />
       </svg>
+      Informații
     </a>
-    <nav class="flex gap-2.5">
-      <a href="informatii.html" class="flex items-center px-5 py-2 bg-[#811c1c] text-white border border-white rounded no-underline text-lg transition-transform duration-300 ease-in-out hover:bg-blue-500 hover:scale-110 gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"/>
-        </svg>
-        Informatii
-      </a>
-      <a href="contact.html" class="flex items-center px-5 py-2 bg-[#811c1c] text-white border border-white rounded no-underline text-lg transition-transform duration-300 ease-in-out hover:bg-blue-500 hover:scale-110 gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/>
-        </svg>
-        Contact
-      </a>
-    </nav>
-  </header>
-
-  <main class="flex-1 px-5 py-10">
-    <div class="flex flex-wrap justify-around gap-5 mt-5">
-      <div class="max-w-md mx-auto bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 bg-opacity-80 hover:bg-opacity-100 rounded-xl shadow-md overflow-hidden md:max-w-2xl transition-opacity slide-in-blurred-left">
-        <div class="md:flex">
-          <div class="p-8">
-            <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Wanda</div>
-            <p class="mt-2 text-slate-500">Wanda este un brand de încredere în domeniul vopselelor auto, parte din portofoliul renumitului producător AkzoNobel, lider global în industrie. Gama de produse Wanda oferă soluții complete pentru vopsirea auto, incluzând lacuri, grunduri, chituri și baze de culoare, toate proiectate pentru a oferi rezultate excelente și durabile. Având la bază tehnologia avansată și experiența îndelungată a AkzoNobel, vopselele Wanda asigură o aplicare ușoară, o potrivire perfectă a culorilor și un finisaj de înaltă calitate, fiind preferate de profesioniștii din domeniul auto pentru fiabilitatea și performanța lor remarcabilă.</p>
-          </div>
+    <a
+      href="contact.html"
+      class="flex items-center lg:px-5 lg:py-2 lg:rounded bg-[#811c1c] text-white lg:border border-white rounded-full no-underline lg:text-lg transition duration-300 ease-in-out hover:bg-[#967969] hover:scale-110 gap-2 px-6 py-6 text-4xl border-2 mr-4 lg:font-light font-bold lg:hover:underline"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-12 h-12 lg:w-6 lg:h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+        />
+      </svg>
+      Contact
+    </a>
+  </nav>
+</header>
+<div class="flex flex-row gap-10 mx-auto mb-6">
+<div class="flex flex-col rounded-2xl w-[400px] bg-white shadow-2xl mt-8 slide-in-blurred-left">
+  <figure class="flex justify-center items-center rounded-2xl">
+      <img src="imageWANDA.png" alt="Card Preview" class="rounded-t-2xl max-h-56 object-cover">
+  </figure>
+  <div class="flex flex-col p-8 bg-[#811c1c] text-white rounded-b-2xl mt-auto">
+      <div class="text-2xl font-bold pb-6">Wanda Colors</div>
+      <div class=" text-lg h-44">La Cupidon Basfalion SRL găsești vopsele auto profesionale Wanda Colors, disponibile la cerere. Personalizează-ți mașina cu nuanța perfectă și bucură-te de calitate și durabilitate de top!</div>
+      <div class="flex justify-end pt-6">
+        <a href="https://www.wandarefinish.com/index.php?id=1" target="_blank">
+          <button class="bg-[white] text-black  font-bold text-base  p-3 rounded-lg hover:bg-[#967969] hover:scale-105 transition-transform transform">Descoperă Wanda!</button>
+        </a>
         </div>
-      </div>
+  </div>
+</div>
 
-      <div class="max-w-md mx-auto bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 bg-opacity-80 hover:bg-opacity-100 rounded-xl shadow-md overflow-hidden md:max-w-2xl transition-opacity slide-in-blurred-right">
-        <div class="md:flex">
-          <div class="p-8">
-            <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Silka</div>
-            <p class="mt-2 text-slate-500">Silka este un lider de încredere în domeniul serviciilor de duplicare și reparație a cheilor auto. Cu o experiență vastă și tehnologie avansată, Silka oferă soluții complete pentru toate tipurile de chei, inclusiv cele de mașini moderne și tradiționale. Serviciile noastre includ duplicarea precisă a cheilor auto, repararea cheilor deteriorate și programarea cheilor inteligente pentru a asigura funcționalitatea optimă. Fie că aveți nevoie de o cheie de rezervă sau de restaurarea unei chei uzate, echipa noastră de profesioniști utilizează echipamente de ultimă generație pentru a vă oferi rezultate rapide și de înaltă calitate. Cu un angajament constant față de satisfacția clientului, Silka este partenerul ideal pentru toate nevoile dumneavoastră legate de chei auto.</p>
-          </div>
+<div class="flex flex-col rounded-2xl w-[400px] bg-white shadow-2xl mt-8 slide-in-blurred-top">
+  <figure class="flex justify-center items-center rounded-2xl">
+      <img src="silca.png" alt="Card Preview" class="rounded-t-2xl max-h-56 object-cover">
+  </figure>
+  <div class="flex flex-col p-8 bg-[#811c1c] text-white rounded-b-2xl mt-auto">
+      <div class="text-2xl font-bold pb-6">Silca</div>
+      <div class=" text-lg h-44">Cu aparatura de ultimă generație de la Silka, la Cupidon Basfalion SRL copiem orice tip de chei, inclusiv chei auto. Beneficiază de servicii rapide și precise pentru siguranța ta!</div>
+      <div class="flex justify-end pt-6">
+        <a href="https://silca-chei.ro/" target="_blank">
+          <button class="bg-[white] text-black  font-bold text-base  p-3 rounded-lg hover:bg-[#967969] hover:scale-105 transition-transform transform">Descoperă Silca!</button>
+        </a>
         </div>
-      </div>
+  </div>
+</div>
 
-      <div class="max-w-md mx-auto bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 bg-opacity-80 hover:bg-opacity-100 rounded-xl shadow-md overflow-hidden md:max-w-2xl transition-opacity slide-in-blurred-bottom">
-        <div class="md:flex">
-          <div class="p-8">
-            <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Furnizarea Pieselor Auto</div>
-            <p class="mt-2 text-slate-500">Cupidon Basfalion SRL este partenerul de încredere în furnizarea de piese auto de calitate superioară, colaborând cu cei mai mari distribuitori de piese auto din România. Lucrăm direct cu Conex, Auto Total și AutoNet pentru a vă oferi acces la o gamă extinsă de componente auto, de la cele mai populare până la cele mai rare și specializate. Indiferent de necesitățile dumneavoastră, fie că sunt piese de schimb, accesorii sau componente de performanță, echipa noastră de specialiști se asigură că primiți cele mai bune produse disponibile pe piață. Cu un angajament ferm față de calitate și satisfacția clientului, Cupidon Basfalion SRL este soluția ideală pentru toate cerințele dumneavoastră de piese auto, asigurându-vă că fiecare piesă este conformă cu standardele de excelență ale industriei.            </p>
-          </div>
+<div class="flex flex-col rounded-2xl w-[400px] bg-white shadow-2xl mt-8 slide-in-blurred-right">
+  <figure class="flex justify-center items-center rounded-2xl">
+      <img src="autototal.jpg" alt="Card Preview" class="rounded-t-2xl w-full max-h-56 object-cover">
+  </figure>
+  <div class="flex flex-col p-8 bg-[#811c1c] text-white rounded-b-2xl mt-auto">
+      <div class="text-2xl font-bold pb-6">Distribuitori Piese Auto</div>
+      <div class=" text-lg h-44">La Cupidon Basfalion SRL colaborăm cu cei mai mari distribuitori de piese auto din România, precum Auto Total, AutoNet și Conex. Asigurăm acces rapid la o gamă largă de produse de calitate, direct de la liderii din industrie.</div>
+      <div class="flex justify-end pt-6">
+        <a href="https://www.autototal.ro/" target="_blank">
+          <button class="bg-[white] text-black  font-bold text-base  p-3 rounded-lg hover:bg-[#967969] hover:scale-105 transition-transform transform">Descoperă AutoTotal!</button>
+        </a>
         </div>
-      </div>
-    </div>
-  </main>
-
-  <footer>
-    <p>&copy; 2024 Cupidon Basfalion SRL - Toate drepturile rezervate.</p>
-  </footer>
+  </div>
+</div>
+</div>
+<footer
+      class="text-center text-white p-10 mt-auto bg-[#811c1c] text-4xl lg:px-5 lg:py-3 lg:text-xl"
+    >
+      &copy; 2024 Cupudion Basfalion SRL - Toate drepturile rezervate
+    </footer>
 </body>
 </html>
