@@ -1,218 +1,33 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
   <title>Informatii</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-  <style>
-
-    .slide-in-blurred-bottom {
-      -webkit-animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-              animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-    }
-
-    .slide-in-blurred-right {
-      -webkit-animation: slide-in-blurred-right 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-              animation: slide-in-blurred-right 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-    }
-
-    .slide-in-blurred-left {
-      -webkit-animation: slide-in-blurred-left 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-              animation: slide-in-blurred-left 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-    }
-
-    .slide-in-blurred-top {
-      -webkit-animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-              animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-    }
-
-    body {
-      font-family: "Lora", serif;
-      background-color: antiquewhite;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      overflow-x: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-
-    main {
-      flex: 1;
-    }
-
-@-webkit-keyframes slide-in-blurred-top {
-0% {
-  -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
-          transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
-  -webkit-transform-origin: 50% 0%;
-          transform-origin: 50% 0%;
-  -webkit-filter: blur(40px);
-          filter: blur(40px);
-  opacity: 0;
-}
-100% {
-  -webkit-transform: translateY(0) scaleY(1) scaleX(1);
-          transform: translateY(0) scaleY(1) scaleX(1);
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-filter: blur(0);
-          filter: blur(0);
-  opacity: 1;
-}
-}
-@keyframes slide-in-blurred-top {
-0% {
-  -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
-          transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
-  -webkit-transform-origin: 50% 0%;
-          transform-origin: 50% 0%;
-  -webkit-filter: blur(40px);
-          filter: blur(40px);
-  opacity: 0;
-}
-100% {
-  -webkit-transform: translateY(0) scaleY(1) scaleX(1);
-          transform: translateY(0) scaleY(1) scaleX(1);
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-filter: blur(0);
-          filter: blur(0);
-  opacity: 1;
-}
-}
-
-@-webkit-keyframes slide-in-blurred-left {
-0% {
-  -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
-          transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
-  -webkit-transform-origin: 100% 50%;
-          transform-origin: 100% 50%;
-  -webkit-filter: blur(40px);
-          filter: blur(40px);
-  opacity: 0;
-}
-100% {
-  -webkit-transform: translateX(0) scaleY(1) scaleX(1);
-          transform: translateX(0) scaleY(1) scaleX(1);
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-filter: blur(0);
-          filter: blur(0);
-  opacity: 1;
-}
-}
-@keyframes slide-in-blurred-left {
-0% {
-  -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
-          transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
-  -webkit-transform-origin: 100% 50%;
-          transform-origin: 100% 50%;
-  -webkit-filter: blur(40px);
-          filter: blur(40px);
-  opacity: 0;
-}
-100% {
-  -webkit-transform: translateX(0) scaleY(1) scaleX(1);
-          transform: translateX(0) scaleY(1) scaleX(1);
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-filter: blur(0);
-          filter: blur(0);
-  opacity: 1;
-}
-}
-
-@-webkit-keyframes slide-in-blurred-right {
-0% {
-  -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
-          transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
-  -webkit-transform-origin: 0% 50%;
-          transform-origin: 0% 50%;
-  -webkit-filter: blur(40px);
-          filter: blur(40px);
-  opacity: 0;
-}
-100% {
-  -webkit-transform: translateX(0) scaleY(1) scaleX(1);
-          transform: translateX(0) scaleY(1) scaleX(1);
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-filter: blur(0);
-          filter: blur(0);
-  opacity: 1;
-}
-}
-@keyframes slide-in-blurred-right {
-0% {
-  -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
-          transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
-  -webkit-transform-origin: 0% 50%;
-          transform-origin: 0% 50%;
-  -webkit-filter: blur(40px);
-          filter: blur(40px);
-  opacity: 0;
-}
-100% {
-  -webkit-transform: translateX(0) scaleY(1) scaleX(1);
-          transform: translateX(0) scaleY(1) scaleX(1);
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-filter: blur(0);
-          filter: blur(0);
-  opacity: 1;
-}
-}
-
-@-webkit-keyframes slide-in-blurred-bottom {
-0% {
-  -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
-          transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
-  -webkit-transform-origin: 50% 100%;
-          transform-origin: 50% 100%;
-  -webkit-filter: blur(40px);
-          filter: blur(40px);
-  opacity: 0;
-}
-100% {
-  -webkit-transform: translateY(0) scaleY(1) scaleX(1);
-          transform: translateY(0) scaleY(1) scaleX(1);
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-filter: blur(0);
-          filter: blur(0);
-  opacity: 1;
-}
-}
-@keyframes slide-in-blurred-bottom {
-0% {
-  -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
-          transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
-  -webkit-transform-origin: 50% 100%;
-          transform-origin: 50% 100%;
-  -webkit-filter: blur(40px);
-          filter: blur(40px);
-  opacity: 0;
-}
-100% {
-  -webkit-transform: translateY(0) scaleY(1) scaleX(1);
-          transform: translateY(0) scaleY(1) scaleX(1);
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-filter: blur(0);
-          filter: blur(0);
-  opacity: 1;
-}
-}
-  </style>
+  <style>    
+        body {
+          font-family: "Lora", serif;
+          background-color: antiquewhite;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          overflow-x: hidden;
+          display: flex;
+          flex-direction: column;
+        }
+    
+        main {
+          flex: 1;
+        }
+    
+      </style>
 </head>
-<body>
+<body class="min-h-screen relative">
   <header
-  class="flex items-center justify-between lg:px-5 lg:py-3 bg-[#811c1c] text-white py-10"
+  class="flex items-center justify-between lg:px-5 lg:py-3 bg-[#811c1c] text-white py-10 sticky top-0 left-0 z-50"
 >
   <a
     href="index.html"
@@ -276,54 +91,54 @@
     </a>
   </nav>
 </header>
-<div class="flex flex-row gap-10 mx-auto mb-6">
-<div class="flex flex-col rounded-2xl w-[400px] bg-white shadow-2xl mt-8 slide-in-blurred-left">
+<div class="flex lg:flex-row flex-col gap-10 mx-auto mb-6">
+<div class="flex flex-col rounded-2xl lg:w-[400px] w-full bg-white shadow-2xl mt-8">
   <figure class="flex justify-center items-center rounded-2xl">
       <img src="imageWANDA.png" alt="Card Preview" class="rounded-t-2xl max-h-56 object-cover">
   </figure>
   <div class="flex flex-col p-8 bg-[#811c1c] text-white rounded-b-2xl mt-auto">
-      <div class="text-2xl font-bold pb-6">Wanda Colors</div>
-      <div class=" text-lg h-44">La Cupidon Basfalion SRL găsești vopsele auto profesionale Wanda Colors, disponibile la cerere. Personalizează-ți mașina cu nuanța perfectă și bucură-te de calitate și durabilitate de top!</div>
-      <div class="flex justify-end pt-6">
+      <div class="text-7xl lg:text-2xl font-bold pb-6">Wanda Colors</div>
+      <div class="lg:text-lg text-5xl h-44">La Cupidon Basfalion SRL găsești vopsele auto profesionale Wanda Colors, disponibile la cerere. Personalizează-ți mașina cu nuanța perfectă și bucură-te de calitate și durabilitate de top!</div>
+      <div class="flex justify-end mt-24">
         <a href="https://www.wandarefinish.com/index.php?id=1" target="_blank">
-          <button class="bg-[white] text-black  font-bold text-base  p-3 rounded-lg hover:bg-[#967969] hover:scale-105 transition-transform transform">Descoperă Wanda!</button>
+          <button class="bg-[white] text-black  font-bold lg:text-base lg:p-3 p-12 mt-12 text-4xl rounded-lg hover:bg-[#967969] hover:scale-105 transition-transform transform">Descoperă Wanda!</button>
         </a>
         </div>
   </div>
 </div>
 
-<div class="flex flex-col rounded-2xl w-[400px] bg-white shadow-2xl mt-8 slide-in-blurred-top">
+<div class="flex flex-col rounded-2xl lg:w-[400px] w-full bg-white shadow-2xl mt-8">
   <figure class="flex justify-center items-center rounded-2xl">
       <img src="silca.png" alt="Card Preview" class="rounded-t-2xl max-h-56 object-cover">
   </figure>
   <div class="flex flex-col p-8 bg-[#811c1c] text-white rounded-b-2xl mt-auto">
-      <div class="text-2xl font-bold pb-6">Silca</div>
-      <div class=" text-lg h-44">Cu aparatura de ultimă generație de la Silka, la Cupidon Basfalion SRL copiem orice tip de chei, inclusiv chei auto. Beneficiază de servicii rapide și precise pentru siguranța ta!</div>
-      <div class="flex justify-end pt-6">
+      <div class="text-7xl lg:text-2xl font-bold pb-6">Silca</div>
+      <div class="lg:text-lg text-5xl h-44">Cu aparatura de ultimă generație de la Silka, la Cupidon Basfalion SRL copiem orice tip de chei, inclusiv chei auto. Beneficiază de servicii rapide și precise pentru siguranța ta!</div>
+      <div class="flex justify-end mt-24">
         <a href="https://silca-chei.ro/" target="_blank">
-          <button class="bg-[white] text-black  font-bold text-base  p-3 rounded-lg hover:bg-[#967969] hover:scale-105 transition-transform transform">Descoperă Silca!</button>
+          <button class="bg-[white] text-black  font-bold lg:text-base lg:p-3  p-12 mt-12 text-4xl rounded-lg hover:bg-[#967969] hover:scale-105 transition-transform transform">Descoperă Silca!</button>
         </a>
         </div>
   </div>
 </div>
 
-<div class="flex flex-col rounded-2xl w-[400px] bg-white shadow-2xl mt-8 slide-in-blurred-right">
+<div class="flex flex-col rounded-2xl lg:w-[400px] w-full bg-white shadow-2xl mt-8">
   <figure class="flex justify-center items-center rounded-2xl">
       <img src="autototal.jpg" alt="Card Preview" class="rounded-t-2xl w-full max-h-56 object-cover">
   </figure>
   <div class="flex flex-col p-8 bg-[#811c1c] text-white rounded-b-2xl mt-auto">
-      <div class="text-2xl font-bold pb-6">Distribuitori Piese Auto</div>
-      <div class=" text-lg h-44">La Cupidon Basfalion SRL colaborăm cu cei mai mari distribuitori de piese auto din România, precum Auto Total, AutoNet și Conex. Asigurăm acces rapid la o gamă largă de produse de calitate, direct de la liderii din industrie.</div>
-      <div class="flex justify-end pt-6">
+      <div class="text-7xl lg:text-2xl font-bold pb-6">Distribuitori Piese Auto</div>
+      <div class="lg:text-lg text-5xl h-44">La Cupidon Basfalion SRL colaborăm cu cei mai mari distribuitori de piese auto din România, precum Auto Total, AutoNet și Conex. Asigurăm acces rapid la o gamă largă de produse de calitate, direct de la liderii din industrie.</div>
+      <div class="flex justify-end mt-24">
         <a href="https://www.autototal.ro/" target="_blank">
-          <button class="bg-[white] text-black  font-bold text-base  p-3 rounded-lg hover:bg-[#967969] hover:scale-105 transition-transform transform">Descoperă AutoTotal!</button>
+          <button class="bg-[white] text-black  font-bold lg:text-base lg:p-3 p-12  mt-12 text-4xl rounded-lg hover:bg-[#967969] hover:scale-105 transition-transform transform">Descoperă AutoTotal!</button>
         </a>
         </div>
   </div>
 </div>
 </div>
 <footer
-      class="text-center text-white p-10 mt-auto bg-[#811c1c] text-4xl lg:px-5 lg:py-3 lg:text-xl"
+      class="text-center text-white p-10 mt-auto bg-[#811c1c] text-4xl lg:px-5 lg:py-3 lg:text-xl mt-auto"
     >
       &copy; 2024 Cupudion Basfalion SRL - Toate drepturile rezervate
     </footer>
